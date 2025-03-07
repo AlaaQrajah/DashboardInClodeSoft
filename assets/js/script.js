@@ -11,3 +11,33 @@ sidebar_toggle.addEventListener("click", () => {
     content.style.marginRight = "250px";
   }
 });
+
+
+new DataTable("#example", {
+  responsive: true,
+  buttons: [
+    // {
+    // extend:'copy',
+    // text:'نسخ'
+    // },
+    // {
+    // extend:'excel',
+    // text:'اكسل'
+    // },
+    // {
+    // extend:'pdf',
+    // text:'صيغةpdf'
+    // },
+    // {
+    // extend:'print',
+    // text:'طباعة'
+    // },
+    "copy",
+    "excel",
+    "pdf",
+    "print",
+  ],
+  layout: {
+    topStart: "buttons",
+  },
+});

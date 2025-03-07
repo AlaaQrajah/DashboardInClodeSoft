@@ -1,75 +1,182 @@
 <!DOCTYPE html>
 <html lang="en" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="assets/css/bootstrap.css" />
-    <link rel="stylesheet" href="assets/css/custom.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body>
-    <div class="main-wrrapper">
-      <nav class="fixed-top">
-        <header class="header d-flex justify-content-between by-1">
-          <div class="right-header d-flex align-items-center gap-3">
-            <div class="logo">
-              <a href="/"> لوحة تحكم المتجر </a>
-            </div>
-           <a href="#"> 
-            <i class="fa-solid fa-chart-bar" id="sidebar-toggle"></i>
-          </a>
-            <form >
-              <input type="text" class="form-control" />
-            </form>
-          </div>
 
-          <div class="left-header d-flex align-items-center gap-3 px-3">
-            <div class="icon d-flex align-items-center gap-3">
-              <a href=""><i class="fa-regular fa-comment"></i></a>
-              <a href=""><i class="fa-regular fa-envelope"></i></a>
-              <a href=""><i class="fa-regular fa-bell"></i></a>
-              <a href=""><i class="fa-regular fa-comment"></i> </a>
-  
-            </div>
-            <div class="avatar">
-              <img   src="assets/images/avatar.png" alt="avatar" />
-            </div>
-            <a href=""><i class="fa-solid fa-bars-staggered active-users"></i></a>
-          </div>
-        </header>
-      </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/bootstrap.css" />
+  <link rel="stylesheet" href="assets/css/privateFileClassesInCss.css" />
+  <link rel="stylesheet" href="assets/fonts/fontes.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
 
-      <div class="sidber " id="sidebar">
-        <div class="profile">
-          <img  src="assets/images/avatar.png" alt="avatar">
-          <h3>Alaa Abdel Razzaq Qarajah  </h3>
-        </div>
-        <ul class="ul-sidebar">
-          
-<li>
-  <i class="fa-solid fahouse-user fs-5"></i>
-  <a href="">الصفحة الرئيسية</a>
-</li>
-        </ul>
-
-
-
-
-
-
+<body>
+  <div class="main-wrrapper">
+<nav class="fixed-top">
+  <header class="header d-flex justify-content-between py-1">
+    <div class="right-header d-flex align-items-center gap-3">
+      <div class="logo d-none d-md-block">
+        <a href="/"> لوحة تحكم المتجر </a>
       </div>
-      <div class="content" id="content">content</div>
-    </div
+      <div class="px-3">
+        <a href="#">
+          <i class="fa-solid fa-chart-bar" id="sidebar-toggle"></i>
+        </a>
+      </div>
+      <form class="header-form-input">
+        <input type="text" class="form-control" placeholder="اكتب اسم المنتج للبحث" />
+      </form>
+    </div>
 
-    <script src="assets/js/bootstrap.js"></script>
-    <script src="assets/js/script.js"></script>
-  </body>
+    <div class="left-header d-flex align-items-center gap-3 px-3">
+      <div class="icon d-flex align-items-center gap-3">
+        <a href="" class="position-relative comment"><i class="fa-regular fa-comment"></i></a>
+        <a href="" class="position-relative envelope"><i class="fa-regular fa-envelope"></i></a>
+        <a href="" class="position-relative bell"><i class="fa-regular fa-bell"></i></a>
+        <a href="" class="position-relative comment1"><i class="fa-regular fa-comment"></i> </a>
+      </div>
+
+      <!-- زر الوضع الليلي/النهاري -->
+      <button id="theme-toggle" class="theme-toggle btn btn-outline-secondary">
+        <i class="fa-regular fa-moon"></i>
+      </button>
+
+      <div class="avatar">
+        <a href="/">
+          <img class="avatar-img" src="assets/images/avatar.png" alt="avatar" />
+        </a>
+      </div>
+      <a href=""><i class="fa-solid fa-bars-staggered active-users"></i></a>
+    </div>
+  </header> 
+</nav>
+
+    <div class="sidber" id="sidebar">
+      <div class="profile">
+        <a href="/">
+          <img src="assets/images/avatar.png" alt="avatar" />
+        </a>
+        <h3>Alaa Abdel Razzaq Qarajah </h3>
+      </div>
+      <ul class="ul-sidebar">
+        <li class="mb-2 active">
+          <i class="fa-solid fa-house fs-5"></i>
+          <a href="/" class="m-r-10">الصفحة الرئيسية</a>
+        </li>
+        <li class="mb-2 ">
+          <i class="fa-solid fa-layer-group fs-5"></i>
+          <a href="" class="m-r-10">تصنيفات المنتجات </a>
+        </li>
+        <li class="mb-2">
+          <i class="fa-solid fa-box fs-5"></i>
+          <a href="" class="m-r-10"> المنتجات</a>
+        </li>
+        <li class="mb-2">
+          <i class="fa-solid fa-book fs-5"></i>
+          <a href="" class="m-r-10"> الكتب الدراسية </a>
+        </li>
+        <li class="mb-2">
+          <i class="fa-solid fa-house-user fs-5"></i>
+          <a href="students.html" class="m-r-10">كافة الطلاب</a>
+        </li>
+        <li class="mb-2">
+          <i class="fa-solid fa-chalkboard-teacher fs-5"></i>
+          <a href="" class="m-r-10"> المدرسين </a>
+        </li>
+        <li class="mb-2">
+          <i class="fa-solid fa-chalkboard-teacher fs-5"></i>
+          <a href="blog.html" class="m-r-10"> المدونة </a>
+        </li>
+
+        <li class="mb-2">
+          <i class="fa-solid fa-user fs-5"></i>
+          <a href="" class="m-r-10"> المستخدمين </a>
+        </li>
+        <li class="mb-2">
+          <i class="fa-solid fa-gear fs-5"></i>
+          <a href="" class="m-r-10"> الاعدادات</a>
+        </li>
+        <li class="mb-2">
+          <i class="fa-solid fa-key fs-5"></i>
+          <a href="" class="m-r-10"> الصلاحيات</a>
+        </li>
+      </ul>
+    </div>
+    <section class="content p-3" id="content">
+      <div class="inner-content">
+        <div class="container-fluid">
+          <div class="row gap-2 flex-wrap flex-md-nowrap">
+            <div class="col-md-3 stat stat-red flex-shrink-1">
+              <div>
+                <h3 class="mb-3"> الطلاب المسجلين</h3>
+                <h4>2500 طالب</h4>
+                <p class="text-white">يتم تحديث العدد بشكل يومي </p>
+              </div>
+              <div class="icones-t">
+                <i class="fa-solid fa-users fs-1"></i>
+              </div>
+            </div>
+            <div class="col-md-3 stat stat-green">
+              <div>
+                <h3 class="mb-3"> المنتجات المتوفرة</h3>
+                <h4>5200 منتج</h4>
+                <p class="text-white">يتم تحديث العدد بشكل يومي </p>
+              </div>
+              <div class="icones-t">
+                <i class="fa-solid fa-address-book fs-1"></i>
+              </div>
+            </div>
+            <div class="col-md-3 stat stat-blue">
+              <div>
+                <h3 class="mb-3"> الشحنات لليوم </h3>
+                <h4>500</h4>
+                <p class="text-white">يتم تحديث العدد بشكل يومي </p>
+              </div>
+              <div class="icones-t">
+                <i class="fa-solid fa-cart-arrow-down fs-1"></i>
+              </div>
+            </div>
+            <div class="col-md-3 stat stat-yellow">
+              <div>
+                <h3 class="mb-3"> الأرباح الشهرية</h3>
+                <h4> 3000 دولار </h4>
+                <p class="text-white">يتم تحديث العدد بشكل يومي </p>
+              </div>
+              <div class="icones-t">
+                <i class="fa-solid fa-sack-dollar fs-1"></i>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-6 mb-3">
+              <div class="card">
+                <p class="text-center p-r-0">جدول توضيحي لنسية تسجيل الطلاب على مدار السنه </p>
+                <div id="chart">
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 p-l-0">
+              <div class="card">
+                <p class="text-center mt-2">جدول توضيحي لنسية تسجيل الطلاب على مدار السنه </p>
+                <div id="chart1">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="assets/js/chart.js"></script>
+  <script src="assets/js/bootstrap.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+
 </html>
